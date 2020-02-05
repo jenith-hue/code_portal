@@ -1,0 +1,10 @@
+{
+    "host": "",
+    "server_port": 4200,
+    "using_connection_string": true,
+    "connection_string": "mongodb+srv://jenith:otcotc18@cluster0-5rsq0.mongodb.net/test",
+    "db_user": "jenith",
+    "db_pass": "otcotc18",
+    "session_secret": "SCRAM"
+}
+
