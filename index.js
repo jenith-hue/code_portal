@@ -54,6 +54,7 @@ var session_secret = process.env.SESSION_SECRET || appConfig.session_secret;
 var db_user = process.env.DB_USER || appConfig.db_user;
 var db_pass = process.env.DB_PASS || appConfig.db_pass;
 var connection_string = appConfig.connection_string;
+console.log(connection_string);
 //process.env.DB_STR || appConfig.connection_string;
 mongoose.connect(connection_string, { 
     useNewUrlParser: true,
