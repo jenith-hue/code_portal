@@ -1,5 +1,6 @@
 var appConfig = require('./config');
 var express = require('express');
+var nodemailer = require('nodemailer');
 var app = express();
 var bodyParser = require('body-parser');
 var cookieParser = require('cookie-parser');
@@ -10,11 +11,50 @@ var dotenv = require('dotenv');
 dotenv.config();
 
 
+var smtpTransport = nodemailer.createTransport("SMTP", {
+
+    service: 'Gmail',
+    auth: {
+        user: 'jenith1999.jj@gmail.com',
+        pass: 'otcjenith1999'
+    }
+});
+
+app.get('/contact', function (req, res) {
+    res.render('contact');
+});
+
+app.get('/send', function (req, res) {
+
+    var mailOptions = {
+        to: req.query.to,
+        subject: 'Contact Form Message',
+        from: "Contact Form Request" + "<" + req.query.from + '>',
+        html:  "From: " + req.query.name + "<br>" +
+               "User's email: " + req.query.user + "<br>" +     "Message: " + req.query.text
+    }
+
+    console.log(mailOptions);
+    smtpTransport.sendMail(mailOptions, function (err, response) {
+        if (err) {
+            console.log(err);
+            res.end("error");
+        } else {
+            console.log("Message sent: " + response.message);
+            res.end("sent");
+        }
+    });
+
+});
+
+
+
 var server_port = process.env.PORT || appConfig.server_port;
 var session_secret = process.env.SESSION_SECRET || appConfig.session_secret;
 var db_user = process.env.DB_USER || appConfig.db_user;
 var db_pass = process.env.DB_PASS || appConfig.db_pass;
-var connection_string = process.env.DB_STR || appConfig.connection_string;
+var connection_string = appConfig.connection_string;
+//process.env.DB_STR || appConfig.connection_string;
 mongoose.connect(connection_string, { 
     useNewUrlParser: true,
     useUnifiedTopology: true
@@ -57,3 +97,6 @@ app.use('/api', api_route);
 app.get('/mcq',function(req,res) {
     res.render('go');
   });
+
+
+
