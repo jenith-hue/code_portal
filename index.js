@@ -59,7 +59,7 @@ console.log(connection_string);
 mongoose.connect(connection_string, { 
     useNewUrlParser: true,
     useUnifiedTopology: true
-});
+}, (err) => { console.log(err)});
 
 var server = app.listen(server_port, function(){
     console.log('Listening on port %d',server_port);
