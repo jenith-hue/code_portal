@@ -9,7 +9,7 @@ var app = angular.module("myApp", ['textAngular']);
 app.controller('AppCtrl', function($scope) {
     
     $scope.name = "New Problem";
-    $scope.time = "1";
+    $scope.time = "20";
     $scope.mem = "32";
     $scope.diff = "0";
     var probHtml = 
@@ -19,11 +19,11 @@ app.controller('AppCtrl', function($scope) {
     ;
     $scope.htmlVariable = "<p style=\"text-align: center;\">\
     <ul> \
-      \
          \
          \
-    </ul> \
-    <p>This problem is an easy one: given integer <b>a</b> and <b>b</b>, calculate <b>a+b</b>.</p> \
+         \
+    </ul>\
+    <p>WRITE YOUR PROBLEM STATEMENT HERE</p> \
     <p><b>Input</b><br> \
     <p><b>Output</b><br></p> \
     <p><b></b></p> \

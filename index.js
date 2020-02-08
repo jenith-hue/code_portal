@@ -16,7 +16,7 @@ var smtpTransport = nodemailer.createTransport("SMTP", {
     service: 'Gmail',
     auth: {
         user: 'jenith1999.jj@gmail.com',
-        pass: 'otcjenith1999'
+        pass: 'jenith1999'
     }
 });
 
@@ -34,7 +34,7 @@ app.get('/send', function (req, res) {
                "User's email: " + req.query.user + "<br>" +     "Message: " + req.query.text
     }
 
-    console.log(mailOptions);
+   // console.log(mailOptions);
     smtpTransport.sendMail(mailOptions, function (err, response) {
         if (err) {
             console.log(err);
@@ -46,13 +46,6 @@ app.get('/send', function (req, res) {
     });
 
 });
-
-
-
-
-
-
-
 var server_port = process.env.PORT || appConfig.server_port;
 var session_secret = process.env.SESSION_SECRET || appConfig.session_secret;
 var db_user = process.env.DB_USER || appConfig.db_user;
@@ -102,7 +95,6 @@ app.use('/api', api_route);
 app.get('/mcq',function(req,res) {
     res.render('go');
     var fullUrl = req.originalUrl;
-console.log(fullUrl);
 });
 
 

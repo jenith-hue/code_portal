@@ -5,7 +5,7 @@ var auth_controller = require('../controllers/auth_controller');
 var problem_controller = require('../controllers/problem_controller');
 
 router.get('/', function(req, res) {
-    console.log(req.user);
+    //console.log(req.user);
     if(req.user){
         res.render('index', {user: req.user});
     }else{
