@@ -3,14 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Celebrity Facts and Quiz</title>
-    <!-- Bootstrap css and my own css -->
+    <title>Perficient</title>
     <link rel="stylesheet"
         href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
         integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7"
         crossorigin="anonymous">
     <link rel="stylesheet" href="css/style3.css">
-    <style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <link rel="stylesheet" href="/css/style11.css">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.css'><link rel="stylesheet" href="/css/style90.css">
+
+
+   <!-- <style>
       .button {
   background-color: #4CAF50; /* Green */
   border: none;
@@ -25,20 +29,54 @@
   
 }
       .button4 {border-radius: 12px;}
-
-    </style>
+    </style>-->
     
 </head>
 <body>
+  <div id="navbar-animmenu">
+
+    <ul class="show-dropdown main-navbar">
+        <div class="hori-selector"><div class="left"></div><div class="right"></div></div>
+        
+        <li>
+            <a href="/"><i class="fa fa-home"></i>Home</a>
+        </li>
+        <li >
+            <a href="/problems"><i class="fa fa-bolt"></i>Problems</a>
+        </li>
+        <li class="active">
+            <a href="/mcq"><i class="far fa-clone"></i>MCQ</a>
+        </li>
+        <li>
+            <a href="/contact"><i class="fa fa-envelope"></i>Contact Us</a>
+        </li>
+        <li style="float:right">
+          <a href="/logout" > Logout  <i class="fas fa-sign-out-alt"></i></a>
+        </li> 
+    </ul>
+</div>
+  <br>
+  <br>
+  <br>
+  <br>
+
     <div class="container">
         <div class="page-header">           
         </div>
 
         <div ng-controller="listCtrl as list" ng-hide="list.quizMetrics.quizActive || list.quizMetrics.resultsActive">
-           <center> <button  class="button button4" ng-click="list.activateQuiz()" >
+<center>
+          <a href="#" class="button" ng-click="list.activateQuiz()">
+            <canvas class="button__canvas"></canvas>
+            <span class="button__text">Click To Start Quiz</span>
+          </a>
+        </center>
+
+
+           <!--<center> <button  class="button button4" ng-click="list.activateQuiz()" >
             <strong>Start Quiz</strong>
             </button>
-          </center>
+           </center>-->
           
 
          <!-- <div class="row">
@@ -268,6 +306,11 @@
     <script src="js/factory/quizMetrics.js"></script>
     <script src="js/factory/dataservice.js"></script>
     <script src="js/controllers/results.js"></script>
+    <script src="https://codepen.io/shshaw/pen/QmZYMG.js"></script>
+    <script src='https://cdn.jsdelivr.net/npm/ola'></script><script  src="/css/script11.js"></script>
+
+    <script src='https://code.jquery.com/jquery-3.4.1.min.js'></script><script  src="/css/script90.js"></script>
+
 
 </body>
 </html>

@@ -10,44 +10,91 @@
         <link href="https://fonts.googleapis.com/css?family=Lato|Source+Code+Pro" rel="stylesheet">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.12/css/all.css" integrity="sha384-G0fIWCsCzJIMAVNQPfjH08cyYaUtMwjJwqiRKxxE/rx96Uroj1BtIQ6MLJuheaO9" crossorigin="anonymous">
         <link rel="stylesheet" href="/css/style.css">
+        <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.css'><link rel="stylesheet" href="/css/style90.css">
+
+      <!--  <style>
+             ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: black;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: white;
+}
+        </style>-->
     </head>
     <body>
-        <nav class="navbar navbar-default navbar-expand-md justify-content-between">
-            <button class="navbar-toggler navbar-light" type="button" data-toggle="collapse" data-target=".dual-nav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="navbar-collapse collapse dual-nav w-100">
-                <ul class="nav navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link pl-0" href="/">Home <span class="sr-only">Home</span></a>
-                    </li>
-                    <li class="nav-item active">
-                        <a class="nav-link" href="/problems">Problems</a>
-                    </li><!--
-                    <li class="nav-item">
-                        <a class="nav-link" href="/admin">Admin</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/custom">Custom</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/api">APIs</a>
-                    </li>-->
-                </ul>
-            </div>
-            <div class="d-none d-sm-block"><a href="/" class="navbar-brand mx-auto d-block text-center w-100"><img id="logo" src="/images/unnamed.png"></img></a></div>
-            <div class="navbar-collapse collapse dual-nav w-100">
-                <ul class="nav navbar-nav ml-auto">
-                    <li class="nav-item">
-                        <% if (user) { %>
-                            <a class="nav-link" href="/logout"><%= user.username %> <i class="fas fa-sign-out-alt"></i></a>
-                        <% } else { %>
-                            <a class="nav-link" href="/login">Login <i class="fas fa-sign-in-alt"></i></a>
-                        <% } %>
-                    </li>
-                </ul>
-            </div>
-        </nav>
+        <div id="navbar-animmenu">
+            <% if (user.permission == 'admin') { %>
+    
+            <ul class="show-dropdown main-navbar">
+                <div class="hori-selector"><div class="left"></div><div class="right"></div></div>
+                <li>
+                    <a href="/"><i class="fa fa-home"></i>Home</a>
+                </li>
+                <li>
+                    <a href="/admin"><i class="fa fa-question"></i>Question pannel</a>
+                </li>
+                <li>
+                    <a href="/admin/newprob"><i class="far fa-clone"></i>New problem</a>
+                </li>
+                <li class="active">
+                    <a href="/admin/announcement"><i class="far fa-calendar-alt"></i>Announcement</a>
+                </li>
+                <li>
+                    <a href="/custom" ><i class="far fa-chart-bar"></i>Custom</a>
+                </li>
+                <li style="float:right">
+                  <% if (user) { %>
+                  <a href="/logout" > <%= user.username %>  <i class="fas fa-sign-out-alt"></i></a>
+              <% } else { %>
+                 <a href="/login">Login<i class="fas fa-sign-in-alt"></i></a>
+                 <% } %>
+                </li>   
+            </ul>
+            <% } else { %>
+              <ul class="show-dropdown main-navbar">
+                <div class="hori-selector"><div class="left"></div><div class="right"></div></div>
+                <li>
+                    <a href="/"><i class="fa fa-home"></i>Home</a>
+                </li>
+                <li class="active">
+                    <a href="/problems"><i class="fa fa-bolt"></i>Problems</a>
+                </li>
+                <li>
+                    <a href="/mcq"><i class="far fa-clone"></i>MCQ</a>
+                </li>
+                <li>
+                    <a href="/contact"><i class="fa fa-envelope"></i>Contact Us</a>
+                </li>
+                <li style="float:right">
+                  <% if (user) { %>
+                  <a href="/logout" > <%= user.username %>  <i class="fas fa-sign-out-alt"></i></a>
+              <% } else { %>
+                 <a href="/login">Login<i class="fas fa-sign-in-alt"></i></a>
+                 <% } %>
+                </li> 
+            </ul>
+            <% } %>
+        </div>
+        <br>
+        <br>
+        <br>
         <br>
         <div class="container">
             <% if (announcement.length) { %>
@@ -66,7 +113,7 @@
             <% } %>
             <div class="row">
                 <div class="col-md-9 col-xs-12">
-                    <h2 style="color:white;">Problems</h2>
+                    <h2 style="color:black;">Problems</h2>
                     <div class="d-flex justify-content-between">
                         <div>
                             <p><i class="fas fa-square" style="color: #2dc937"> Easy </i>&nbsp;&nbsp;<i class="fas fa-square" style="color: #e7b416"> Medium </i>&nbsp;&nbsp;<i class="fas fa-square" style="color: #cc3232"> Hard</i></p>
@@ -133,14 +180,14 @@
                     e.tags.forEach(function(tag) {
                         html += '<a href="/problems/tag/' + tag.replace(' ','_') + '" class="badge badge-default">' + tag + '</a> '
                     })
-                    html += '</div><div class="solved-count">Solved <i class="far fa-check-circle"></i> <b>' + e.solved + '</b></div>';
+                    html += '</div><div class="solved-count"> <i class="far fa-check-circle"></i> <b>' + e.solved + '</b></div>';
                     html += '<div class="solve-btn"><a role="button" class="btn btn-primary" href="/problems/' + e.pid + '">' + "Let's solve" + '</a></div>';
                     html += '<div class="ignore-btn" id="ignore-' + count++ + '">x</div>'
                     html += '</div>'
                 })
                 $('#problem-grid').html(html);
                 let htmlListView = '<table class="table table-hover"><thead><tr><th scope="col">#</th><th scope="col">Problem Name</th><th scope="col">Tags</th> \
-                                <th scope="col">Solved</th></tr></thead><tbody>';
+                                <th scope="col"></th></tr></thead><tbody>';
                 res.forEach(function(e) {
                     htmlListView += '<tr><th scope="row" style="color: ' + diff_color[e.difficulty] + '">' + e.pid + '</th>'
                     htmlListView += '<td><a href="/problems/' + e.pid + '">' + e.name + '</a></td><td>';
@@ -193,4 +240,6 @@
             })
         });
     </script>
+    <script src='https://code.jquery.com/jquery-3.4.1.min.js'></script><script  src="/css/script90.js"></script>
+
 </html>

@@ -19,51 +19,97 @@
         <script src='https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.37.0/mode/clike/clike.min.js'></script>
         <script src='https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.37.0/mode/python/python.min.js'></script>
         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.css'><link rel="stylesheet" href="/css/style90.css">
+
+       <!-- <style>
+            ul {
+ list-style-type: none;
+ margin: 0;
+ padding: 0;
+ overflow: hidden;
+ background-color: black;
+}
+
+li {
+ float: left;
+}
+
+li a {
+ display: block;
+ color: white;
+ text-align: center;
+ padding: 14px 16px;
+ text-decoration: none;
+}
+
+li a:hover {
+ background-color: white;
+}
+       </style>-->
     </head>
     <body>
-        <nav class="navbar navbar-default navbar-expand-md justify-content-between">
-            <button class="navbar-toggler navbar-light" type="button" data-toggle="collapse" data-target=".dual-nav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="navbar-collapse collapse dual-nav w-100">
-                <ul class="nav navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link pl-0" href="/">Home <span class="sr-only">Home</span></a>
-                    </li>
-                    <li class="nav-item active">
-                        <a class="nav-link" href="/problems">Problems</a>
-                    </li>
-                    <!--
-                    <li class="nav-item">
-                        <a class="nav-link" href="/admin">Admin</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/custom">Custom</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/api">APIs</a>
-                    </li>-->
-                </ul>
-            </div>
-            <div class="d-none d-sm-block"><a href="/" class="navbar-brand mx-auto d-block text-center w-100"><img id="logo" src="/images/unnamed.png"></img></a></div>
-            <div class="navbar-collapse collapse dual-nav w-100">
-                <ul class="nav navbar-nav ml-auto">
-                    <li class="nav-item">
-                        <% if (user) { %>
-                            <a class="nav-link" href="/logout"><%= user.username %> <i class="fas fa-sign-out-alt"></i></a>
-                        <% } else { %>
-                            <a class="nav-link" href="/login">Login <i class="fas fa-sign-in-alt"></i></a>
-                        <% } %>
-                    </li>
-                </ul>
-            </div>
-        </nav>
+        <div id="navbar-animmenu">
+            <% if (user.permission == 'admin') { %>
+    
+            <ul class="show-dropdown main-navbar">
+                <div class="hori-selector"><div class="left"></div><div class="right"></div></div>
+                <li>
+                    <a href="/"><i class="fa fa-home"></i>Home</a>
+                </li>
+                <li>
+                    <a href="/admin"><i class="fa fa-question"></i>Question pannel</a>
+                </li>
+                <li>
+                    <a href="/admin/newprob"><i class="far fa-clone"></i>New problem</a>
+                </li>
+                <li class="active">
+                    <a href="/admin/announcement"><i class="far fa-calendar-alt"></i>Announcement</a>
+                </li>
+                <li>
+                    <a href="/custom" ><i class="far fa-chart-bar"></i>Custom</a>
+                </li>
+                <li style="float:right">
+                  <% if (user) { %>
+                  <a href="/logout" > <%= user.username %>  <i class="fas fa-sign-out-alt"></i></a>
+              <% } else { %>
+                 <a href="/login">Login<i class="fas fa-sign-in-alt"></i></a>
+                 <% } %>
+                </li>   
+            </ul>
+            <% } else { %>
+              <ul class="show-dropdown main-navbar">
+                <div class="hori-selector"><div class="left"></div><div class="right"></div></div>
+                <li>
+                    <a href="/"><i class="fa fa-home"></i>Home</a>
+                </li>
+                <li class="active">
+                    <a href="/problems"><i class="fa fa-bolt"></i>Problems</a>
+                </li>
+                <li>
+                    <a href="/mcq"><i class="far fa-clone"></i>MCQ</a>
+                </li>
+                <li>
+                    <a href="/contact"><i class="fa fa-envelope"></i>Contact Us</a>
+                </li>
+                <li style="float:right">
+                  <% if (user) { %>
+                  <a href="/logout" > <%= user.username %>  <i class="fas fa-sign-out-alt"></i></a>
+              <% } else { %>
+                 <a href="/login">Login<i class="fas fa-sign-in-alt"></i></a>
+                 <% } %>
+                </li> 
+            </ul>
+            <% } %>
+        </div>
         <br>
-        <div class="container" style="color:white;">
+        <br>
+        <br>
+        <br>
+        <div class="container" style="color:black;">
             <div class="row">
                 <div class="col-md-9">
                     <h2 style="text-align: center;"><%= content.name %></h2>
-                    <p style="text-align: center;">Time Limit: <%= content.time_limit %> seconds<br>
+                    <p style="text-align: center;">Time Limit: <%= content.time_limit %> minutes<br>
                     Memory Limit: <%= content.memory_limit %> megabytes</p>
                     <div class="prob-desc">
                         <%- content.desc %>
@@ -100,7 +146,7 @@
                                     myeditor.setOption("mode", language);
                                     console.log(language);
                                 })
-                                //myeditor.setOption("mode", language);
+                                myeditor.setOption("mode", language);
                             </script>
                             <br>
                             <button type="submit" class="btn btn-secondary">Submit</button>
@@ -128,7 +174,7 @@
                     </div>
                     <br>
                    <!-- <div class="side-box">
-                        <!--<div style="padding:10px;">
+                        <div style="padding:10px;">
                              <div class="submission-header">Problem tags</div>
                             <% if (content.tags.length === 1 && content.tags[0] === '') { %>
                                 <p>No problem tag.</p>
@@ -136,7 +182,7 @@
                                 <a href="#" class="badge badge-default"><%= tag %></a>
                             <% })} %>
                         </div>-->
-                    </div>-->
+                    </div>
                 </div>
             </div>
         </div>
@@ -178,4 +224,6 @@
             });
         </script>
     <% } %>
+    <script src='https://code.jquery.com/jquery-3.4.1.min.js'></script><script  src="/css/script90.js"></script>
+
 </html>

@@ -7,9 +7,61 @@
 
     <link type="text/css" rel="stylesheet" href="./css/main.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.css'><link rel="stylesheet" href="/css/style90.css">
+
+    <!--<style>
+         ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: black;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: rgb(180, 177, 177);
+}
+    </style>-->
 </head>
 
 <body>
+    <div id="navbar-animmenu">
+
+        <ul class="show-dropdown main-navbar">
+            <div class="hori-selector"><div class="left"></div><div class="right"></div></div>
+            
+            <li>
+                <a href="/"><i class="fa fa-home"></i>Home</a>
+            </li>
+            <li >
+                <a href="/problems"><i class="fa fa-bolt"></i>Problems</a>
+            </li>
+            <li>
+                <a href="/mcq"><i class="far fa-clone"></i>MCQ</a>
+            </li>
+            <li class="active">
+                <a href="/contact"><i class="fa fa-envelope"></i>Contact Us</a>
+            </li>
+            <li style="float:right">
+              <a href="/logout" > Logout  <i class="fas fa-sign-out-alt"></i></a>
+            </li> 
+        </ul>
+    </div>
+    <br>
+        <br>
+        <br>
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js"></script>
 
@@ -26,7 +78,17 @@
                     name: name,
                     user: user,
                     text: text
-                }, function (data) {
+                },function (data) {
+                    if (data == "sent") {
+                        console.log("Email sent");
+                    }
+                });
+                $.get("https://jenithcodeportal.herokuapp.com/contact", {
+                    to: to,
+                    name: name,
+                    user: user,
+                    text: text
+                },function (data) {
                     if (data == "sent") {
                         console.log("Email sent");
                     }
@@ -91,6 +153,7 @@
     </div>
 
 
+    <script src='https://code.jquery.com/jquery-3.4.1.min.js'></script><script  src="/css/script90.js"></script>
 
 
 

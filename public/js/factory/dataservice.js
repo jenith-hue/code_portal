@@ -59,7 +59,7 @@ var quizQuestions = [
 
     {
         type: "text",
-        text: "WHO INVENGTED JAVA",
+        text: "WHO INVENTED JAVA",
         possibilities: [
           {
             answer: "MARK"

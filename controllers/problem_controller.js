@@ -18,6 +18,7 @@ exports.get_all_problem = function(req, res) {
             res.render('problemlist', {user:req.user, problem: problem, announcement: an_res});
         })
     })
+   
 }
 else{
     res.redirect('/login')
@@ -28,6 +29,8 @@ exports.get_mcq = function(req, res) {
     console.log(222222222222);
     if(req.user){
         res.render('go', {user:req.user});
+        console.log(222222222222);
+
 }
 else{
     res.redirect('/login')
@@ -40,7 +43,7 @@ else{
 exports.get_problem_finish = function(req, res) {
     console.log(1111111111);
     if(req.user){
-        res.render('finish', {user:req.user});
+        res.redirect('/problems');
 }
 else{
     res.redirect('/login')

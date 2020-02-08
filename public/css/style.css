@@ -18,10 +18,10 @@
 body {
     font-family: 'Lato', sans-serif;
    /* margin: 0 0 100px;*/
-    background-color: rgb(241, 232, 149);
+    background-color: #eef;
     background-size: cover;
 
-    background-image: url("background.jpg");
+    /*background-image: url("background.jpg");*/
     background-repeat: no-repeat;
 
 }
@@ -43,7 +43,7 @@ h2 {
 }
 
 html {
-    position: relative;
+    
     min-height: 100%;
 }
 
@@ -68,7 +68,7 @@ footer {
 /* Navbar */
 
 .navbar-default, .homepage {
-    font-family:elephant;
+    font-family:'Lato', sans-serif;
 }
 
 .homepage .navbar-default {
@@ -154,7 +154,13 @@ footer {
     z-index: 199;
     transform: translate(-50%, 0%);
 }
-
+.containter1{
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
 #console-bar {
     position: absolute;
     width: 50%;
