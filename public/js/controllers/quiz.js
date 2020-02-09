@@ -1,3 +1,5 @@
+
+
 (function() {
     angular.module("celebrityFacts")
     .controller("quizCtrl", QuizController);

@@ -1,9 +1,12 @@
+
+
 (function(){
   angular
   .module("celebrityFacts")
   .controller("resultsCtrl", ResultsController);
 
   ResultsController.$inject = ['quizMetrics', 'DataService'];
+   
 
   function ResultsController(quizMetrics, DataService) {
     var vm = this
@@ -45,5 +48,4 @@
     }
   }
 }
-
 })();

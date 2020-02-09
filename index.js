@@ -24,6 +24,8 @@ app.get('/contact', function (req, res) {
     res.render('contact');
 });
 
+
+
 app.get('/send', function (req, res) {
 
     var mailOptions = {
@@ -96,7 +98,9 @@ app.get('/mcq',function(req,res) {
     res.render('go');
     var fullUrl = req.originalUrl;
 });
-
+app.get('/result', function (req, res) {
+    res.render('result');
+});
 
 
 

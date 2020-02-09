@@ -1,3 +1,29 @@
+var app = angular.module('myApp', ['zingchart-angularjs']);
+app.controller('MainController',function ($scope) {
+ 
+ var a =JSON.parse(localStorage.getItem("corr"));
+ var b =5-a;
+  
+  $scope.myJson = {
+    type: "pie",
+    title: {
+      textAlign: 'center',
+      text: "Your Score"
+    },
+    plot: {
+      slice: 50 
+    },
+    series: [{
+      values: [a],
+      text: "Wrong Answers"
+
+    }, {
+      values: [b],
+      text: "Right Answers"
+    }]
+  };
+});
+
 (function() {
     angular.module("celebrityFacts")
     .factory("quizMetrics", QuizMetrics);
@@ -15,6 +41,9 @@
         numCorrect: 0
       };
       return quizObj;
+
+
+
 
       function changeState(metric, state) {   //we can change state of the quiz or the result
         if(metric === "quiz"){
@@ -39,7 +68,10 @@
             DataService.quizQuestions[i].correct = false;
           }
         }
+        localStorage.setItem("corr",quizObj.numCorrect);
+        //alert(localStorage.getItem("corr"));
       }
     }
 
 })();
+
