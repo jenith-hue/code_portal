@@ -102,6 +102,13 @@ app.get('/result', function (req, res) {
     res.render('result');
 });
 
+app.get('/adminmcq', function (req, res) {
+    res.render('adminmcq');
+});
+app.get('/hello',function(req,res){
+    res.render('problems');
+});
+
 
 
 
