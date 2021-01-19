@@ -9,7 +9,7 @@
     return dataObj;
   }
 
-var correctAnswers = [1,3,2,1,1]; 
+var correctAnswers = [1,1,3,2,1,1]; 
 
 var quizQuestions = [
     {
@@ -27,6 +27,27 @@ var quizQuestions = [
         },
         {
           answer: "Rs.220"
+        }
+      ],
+      selected: null,
+      correct: null
+    },
+  
+    {
+      type: "text",
+      text: " Who are you ?  ",
+      possibilities: [
+        {
+          answer: "I"
+        },
+        {
+          answer: "Me"
+        },
+        {
+          answer: "You"
+        },
+        {
+          answer: "They"
         }
       ],
       selected: null,
