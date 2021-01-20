@@ -38,4 +38,7 @@ router.get('/custom/live', function(req, res) {
 
 router.post('/custom/live', problem_controller.post_custom_test_live);
 
+router.get('/mcq', problem_controller.get_mcq);
+
+
 module.exports = router;
