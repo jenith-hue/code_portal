@@ -297,7 +297,7 @@
   </div> <!-- quiz controller -->
 
   <div ng-controller="resultsCtrl as results" ng-show="results.quizMetrics.resultsActive">
-  <div class="row">
+  <-- <div class="row">
     <div class="col-xs-8">
       <h2>Results: </h2>
       <div class="btn-toolbar">
@@ -377,7 +377,8 @@
     <center>
       <button class="btn success" type="submit" id="q" style="color: white;">CLICK TO VIEW RESULT</button>
     </center>
-  </div>
+  </div> -->
+  <p style="text-align: center;"><b>You Have Successfully Completed The Test Now You Can Leave<b></p>
   </div>
   
 </div>
@@ -532,9 +533,15 @@ setTimeout(function(){
   }(); }, 3000);
 
 
+var count = 0;
 
 setInterval(function(){ window.onblur = function () {
-    alert('You switched the tab');
+    alert('You switched the tab it is being monitored');
+    count++;
+    if(count>5)
+    {
+      location.replace('/');
+    }
 } }, 1000);
 
 function dis(val) 
