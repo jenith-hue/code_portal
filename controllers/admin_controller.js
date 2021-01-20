@@ -3,6 +3,8 @@ var Problem = require('../models/problem');
 var Testcase = require('../models/testcase');
 var Submission = require('../models/submission');
 var Announcement = require('../models/announcement');
+var mcq = require('../models/mcqres');
+
 
 exports.get_admin = function(req, res) {
          if (req.user && req.user.permission === 'admin') {
@@ -174,6 +176,26 @@ exports.post_announcement = function(req, res) {
         new_announcement.save(function(err) {
             if (err) res.render('error', {user: req.user, message: "Saving error."});
             res.redirect('/admin/announcement');
+        })
+    } else {
+        res.render('error', {user: req.user, message: "You don't have permission to access this page."});
+    }
+};
+
+exports.post_mcq = function(req, res) {
+    if (req.user && req.user.permission === 'user') {
+        var new_mcq = new mcq({
+            username: req.user.username,
+            score: req.body.score
+        });
+        new_mcq.save(function(err) {
+            if (err) {
+                res.render('error', {user: req.user, message: "Saving error."})
+               
+            };
+           // res.redirect('/admin/announcement');
+          
+          res.render('go',{user : req.user});
         })
     } else {
         res.render('error', {user: req.user, message: "You don't have permission to access this page."});
