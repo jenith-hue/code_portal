@@ -15,11 +15,11 @@ app.controller('MainController',function ($scope) {
     },
     series: [{
       values: [a],
-      text: "Wrong Answers"
+      text: "Correct Answers"
 
     }, {
       values: [b],
-      text: "Right Answers"
+      text: "Wrong Answers"
     }]
   };
 });
@@ -28,9 +28,9 @@ app.controller('MainController',function ($scope) {
     angular.module("celebrityFacts")
     .factory("quizMetrics", QuizMetrics);
 
-    QuizMetrics.$inject = ['DataService']; //my answers are comming from DataService
+    QuizMetrics.$inject = ['DataService',"$http"]; //my answers are comming from DataService
 
-    function QuizMetrics(DataService) {
+    function QuizMetrics(DataService,$http) {
       //in a factoy you do some work and return the object (data), and your controller will have access to this object (hence communicating between the controllers)
       var quizObj = {
         quizActive: false,
@@ -68,10 +68,19 @@ app.controller('MainController',function ($scope) {
             DataService.quizQuestions[i].correct = false;
           }
         }
+
+        $http.post('admin/mcqSubmit',{score : quizObj.numCorrect}).then(function(response){
+           console.log('response',response);
+        },function(error){
+
+        });
+
         localStorage.setItem("corr",quizObj.numCorrect);
-        //alert(localStorage.getItem("corr"));
+       // alert(localStorage.getItem("corr"));
       }
     }
 
 })();
+
+
 
