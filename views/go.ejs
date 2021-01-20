@@ -97,7 +97,7 @@
             <a href="/contact"><i class="fa fa-envelope"></i>Contact Us</a>
         </li>
         <li style="float:right">
-          <a href="/logout" > Logout  <i class="fas fa-sign-out-alt"></i></a>
+          <a href="/logout" > <i class="fas fa-sign-out-alt"></i></a>
         </li> 
     </ul>
 </div>
@@ -227,7 +227,7 @@
               <div class="col-sm-6" ng-repeat="answer in quiz.dataService.quizQuestions[quiz.activeQuestion].possibilities">
                 <h4 class="answer"
                 ng-class="{'bg-info': $index == quiz.dataService.quizQuestions[quiz.activeQuestion].selected}" ng-click="quiz.selectAnswer($index)">{{answer.answer}}</h4>
-              </div
+              </div>
             </div>
 
             <div class="row"
@@ -244,7 +244,7 @@
           </div>
         </div>
         <button class="btn btn-warning" ng-click="quiz.questionAnswered()">Continue</button>
-	<div style="margin-top: 100px;">
+        <div style="margin-top: 100px;">
         <div class = title >Calculator</div> 
       <table border="1"> 
          <tr> 
@@ -280,7 +280,7 @@
             <td><input type="button" value="Multiply" onclick="dis('*')"/> </td> 
          </tr> 
       </table> 
-      </div>
+    </div>
      
       </div>
 
@@ -297,7 +297,87 @@
   </div> <!-- quiz controller -->
 
   <div ng-controller="resultsCtrl as results" ng-show="results.quizMetrics.resultsActive">
+  <!-- <div class="row">
+    <div class="col-xs-8">
+      <h2>Results: </h2>
+      <div class="btn-toolbar">
+       <button class="btn"
+         ng-repeat="question in results.dataService.quizQuestions"
+         ng-class="{'btn-success': question.correct, 'btn-danger' : !question.correct}"
+         ng-click="results.setActiveQuestion($index)">
+         <span class="glyphicon" ng-class="{'glyphicon-ok': question.correct, 'glyphicon-remove': !question.correct}"></span>
+        </button>
+      </div>
+    </div>
+
+    <div class="col-xs-4"> 
+      <div class="row">
+        <h4>Legend: </h4>
+        <div class="col-sm-4">
+          <button class="btn btn-success">
+          <span class="glyphicon glyphicon-ok"></span>
+          </button>
+          <p>Correct</p>
+        </div>
+        <div class="col-sm-4">
+          <button class="btn btn-danger">
+            <span class="glyphicon glyphicon-remove"></span>
+          </button>
+          <p>Incorrect</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+ 
+    <div class="col-xs-12 top-buffer">
+      <h2>You Scored {{results.quizMetrics.numCorrect}} / {{results.dataService.quizQuestions.length}}</h2>
+      <h2><strong>{{results.calculatePerc() | number : 2}}%</strong></h2>
+    </div>
   
+    
+
+  <div class="row">
+    <h3>Questions:</h3>
+    <div class="well well-sm">
+      <div class="row">
+        <div class="col-xs-12">
+          <h4>{{results.activeQuestion+1 + ". " + results.dataService.quizQuestions[results.activeQuestion].text}}</h4>
+
+          <div class="row"
+            ng-if="results.dataService.quizQuestions[results.activeQuestion].type === 'text'">
+            <div class="col-sm-6" ng-repeat="answer in results.dataService.quizQuestions[results.activeQuestion].possibilities">
+              <h4 class="answer"
+                ng-class="results.getAnswerClass($index)">
+                {{answer.answer}}
+                <p class="pull-right"
+                      ng-show="$index !== results.quizMetrics.correctAnswers[results.activeQuestion] && $index === results.dataService.quizQuestions[results.activeQuestion].selected">Your Answer</p>
+                <p class="pull-right"
+                    ng-show="$index === results.quizMetrics.correctAnswers[results.activeQuestion]">Correct Answer</p>
+              </h4>
+            </div>
+          </div> 
+
+            <div class="row"
+            ng-if="results.dataService.quizQuestions[results.activeQuestion].type === 'image'">
+              <div class="col-sm-6" ng-repeat="answer in results.dataService.quizQuestions[results.activeQuestion].possibilities">
+                <div class="image-answer"
+                  ng-class="results.getAnswerClass($index)">
+                <img ng-src="{{answer.answer}}">
+                <h4>{{answer.name}}</h4>
+                </div>
+              </div>
+            </div>
+
+        </div>
+      </div>
+    </div> 
+    <form action="/result" method="get" target="_blank">
+    <center>
+      <button class="btn success" type="submit" id="q" style="color: white;">CLICK TO VIEW RESULT</button>
+    </center>
+  </div> -->
   <p style="text-align: center;"><b>You Have Successfully Completed The Test Now You Can Leave<b></p>
   </div>
   
@@ -452,13 +532,12 @@ setTimeout(function(){
 
   }(); }, 3000);
 
-
 var count = 0;
 
 setInterval(function(){ window.onblur = function () {
-    alert('You switched the tab it is being monitored');
+    alert('You switched the tab it is being monitored except microphone and camera access popup all will be added into your account');
     count++;
-    if(count>5)
+    if(count>8)
     {
       location.replace('/');
     }
