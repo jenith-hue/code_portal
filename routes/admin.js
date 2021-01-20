@@ -21,6 +21,8 @@ router.get('/announcement', admin_controller.get_announcement);
 
 router.post('/announcement', admin_controller.post_announcement);
 
+router.post('/mcqSubmit', admin_controller.post_mcq);
+
 router.get('/announcement/delete', admin_controller.delete_all_announcement);
 
 module.exports = router;
