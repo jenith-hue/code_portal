@@ -9,24 +9,24 @@
     return dataObj;
   }
 
-var correctAnswers = [0,1,2,0,2,0,1,3,0,2,3,1,0,1,1,1,3,2,3,0,1,1,0,2,0,3,2,0,3,2,0,0,3,2,3,0,0,0,2,3,2,3,0,3,0]; 
+var correctAnswers = [0,1,0,0,0,2,0,1,2,0,1,0,2,0,1,0,1,2,1,1,2,1,1,0,3,3,0,0,0,0,2,1,1,0,0,1,0,0,0,3,1,1,0,0,0]; 
 
 var quizQuestions = [
     {
       type: "text",
-      text: " Which level of management would be most involved in the function of planning and organizing? ",
+      text: " In_____ topology if the computer cable is broken, networks get down ",
       possibilities: [
         {
-          answer: "Top"
+          answer: "bus"
         },
         {
-          answer: "Middle"
+          answer: "star"
         },
         {
-          answer: "First Level"
+          answer: "ring"
         },
         {
-          answer: "All of these"
+          answer: "mesh"
         }
       ],
       selected: null,
@@ -34,19 +34,19 @@ var quizQuestions = [
     },
     {
       type: "text",
-      text: " The determination and grouping of activities, delegation of authority, span of management etc, are involved in the function of ",
+      text: " The network layer protocol for internet is __________  ",
       possibilities: [
         {
-          answer: "Planning"
+          answer: "ethernet"
         },
         {
-          answer: "Organizing"
+          answer: "IP"
         },
         {
-          answer: "Directing"
+          answer: "FTP"
         },
         {
-          answer: "Controlling"
+          answer: "HTTP"
         }
       ],
       selected: null,
@@ -55,86 +55,86 @@ var quizQuestions = [
 
     {
       type: "text",
-      text: " Management is ",
+      text: " ICMP is primarily used for __________  ",
       possibilities: [
         {
-          answer: "An Art"
+          answer: "error and diagnostics"
         },
         {
-          answer: "A Science"
+          answer: "addressing"
         },
         {
-          answer: " Both Art and Science "
+          answer: " forwarding "
         },
         {
-          answer: " Neither an art nor a science"
+          answer: "routing"
         }
       ],
       selected: null,
       correct: null
-    },
-
-   
-
-    {
-        type: "text",
-        text: " The founder of scientific management movement was ",
-        possibilities: [
-          {
-            answer: "Henri Fayol"
-          },
-          {
-            answer: "F.W.Taylor"
-          },
-          {
-            answer: "Elton Mayo"
-          },
-          {
-            answer: "M.P.Follett."
-          }
-        ],
-        selected: null,
-        correct: null
-    },
-
-    {
-        type: "text",
-        text: " The primary measure of the effectiveness of a manager is ",
-        possibilities: [
-          {
-            answer: "the number of employees supervised"
-          },
-          {
-            answer: "the total size of the organization"
-          },
-          {
-            answer: "the results obtained"
-          },
-          {
-            answer: "how busy the person is"
-          }
-        ],
-        selected: null,
-        correct: null
     },
 
    
 
     {
         type: "text",
-        text: "In comparison to top level managers, a first -line supervisor will spend more time in ",
+        text: " Which layer provides the services to user?  ",
         possibilities: [
           {
-            answer: "direction of subordinates"
+            answer: "application layer "
           },
           {
-            answer: "policy making"
+            answer: "presentation layer"
           },
           {
-            answer: "public relations"
+            answer: "session layer"
           },
           {
-            answer: "long range planning"
+            answer: "network layer "
+          }
+        ],
+        selected: null,
+        correct: null
+    },
+
+    {
+        type: "text",
+        text: " In _________ systems, resources are allocated on demand ",
+        possibilities: [
+          {
+            answer: "Packet switched"
+          },
+          {
+            answer: "Circuit switched"
+          },
+          {
+            answer: "Message switched"
+          },
+          {
+            answer: "Data switched"
+          }
+        ],
+        selected: null,
+        correct: null
+    },
+
+   
+
+    {
+        type: "text",
+        text: "Which transmission media provides the highest transmission speed in a network? ",
+        possibilities: [
+          {
+            answer: "coaxial cable"
+          },
+          {
+            answer: "twisted pair cable"
+          },
+          {
+            answer: "optical fiber"
+          },
+          {
+            answer: "electrical cable"
           }
         ],
         selected: null,
@@ -142,19 +142,19 @@ var quizQuestions = [
     },
     {
       type: "text",
-      text: " The chief informational needs required for effective planning are ",
+      text: " What is a primary function of the trailer information added by the data link layer encapsulation? ",
       possibilities: [
         {
-          answer: "objective, personnel and political"
+          answer: "Supports error detection"
         },
         {
-          answer: "environmental, competitive and of the individual enterprise"
+          answer: "Ensures ordered arrival of data"
         },
         {
-          answer: "environmental, political and price levels"
+          answer: "Identifies the devices on the local network"
         },
         {
-          answer: "none of these."
+          answer: "Provides delivery to correct destination"
         }
       ],
       selected: null,
@@ -162,19 +162,19 @@ var quizQuestions = [
     },
     {
       type: "text",
-      text: " Three types of plans are usually used in large business corporations. Which of the following is least useful? ",
+      text: " Which ARQ mechanism deals with the transmission of only damaged or lost frames despite the other multiple frames by increasing the efficiency & its utility in noisy channels? ",
       possibilities: [
         {
-          answer: "strategic"
+          answer: "Go-Back-N ARQ"
         },
         {
-          answer: "annual operating"
+          answer: "Selective Repeat ARQ"
         },
         {
-          answer: "short-range operational"
+          answer: "Stop-and-Wait ARQ"
         },
         {
-          answer: "informal"
+          answer: "All of the above"
         }
       ],
       selected: null,
@@ -182,19 +182,19 @@ var quizQuestions = [
     },
     {
       type: "text",
-      text: " The most current flow of formalized planning process is initiated at ",
+      text: " Which category of HDLC frames undergoes error and flow control mechanisms by comprising send and receive sequence numbers? ",
       possibilities: [
         {
-          answer: "the top and flows downwards"
+          answer: "U-frames"
         },
         {
-          answer: "the middle levels and flows up and down"
+          answer: "I-frames"
         },
         {
-          answer: "the top and bottom and flows toward the middle"
+          answer: "S-frames"
         },
         {
-          answer: "the bottom and flows upwards."
+          answer: "All of the above"
         }
       ],
       selected: null,
@@ -202,19 +202,19 @@ var quizQuestions = [
     },
     {
       type: "text",
-      text: " MBA evaluates the performance of operating units and individuals in terms of  ",
+      text: " The ------------ protocol has flow control but not error control  ",
       possibilities: [
         {
-          answer: "employee characteristics"
+          answer: "Stop- and- wait"
         },
         {
-          answer: "employee personal traits"
+          answer: "Simplest"
         },
         {
-          answer: "objective work goals"
+          answer: "Go-BACK-N ARQ"
         },
         {
-          answer: "All of these."
+          answer: "Selective- Repeat ARQ"
         }
       ],
       selected: null,
@@ -222,19 +222,19 @@ var quizQuestions = [
     },
     {
       type: "text",
-      text: " Planning function of management is performed by: ",
+      text: " In IEEE 802.11 , a BSS with an AP is sometimes called an --------- ",
       possibilities: [
         {
-          answer: "top management"
+          answer: "An ad hoc architecture"
         },
         {
-          answer: "middle management"
+          answer: "An infrastructure network"
         },
         {
-          answer: "lower management"
+          answer: "Either (a) or (b)"
         },
         {
-          answer: "All of these levels"
+          answer: "Neither (a) nor (b)"
         }
       ],
       selected: null,
@@ -242,19 +242,19 @@ var quizQuestions = [
     },
     {
       type: "text",
-      text: " Advantage of MBO is that : ",
+      text: " A Bluetooth network is called a --------- ",
       possibilities: [
         {
-          answer: "a worker's job tasks become more clarified"
+          answer: "Piconet"
         },
         {
-          answer: "worker's may adhere rapidly to establish goals"
+          answer: "Scatternet"
         },
         {
-          answer: "appraisals are now based on results"
+          answer: "Bluenet"
         },
         {
-          answer: "Self-evaluation and self-control are emphasized more than before."
+          answer: "None of the above"
         }
       ],
       selected: null,
@@ -262,19 +262,19 @@ var quizQuestions = [
     },
     {
       type: "text",
-      text: " Most organization charts are displayed on which basis: ",
+      text: " Which functionality of the network layer deals with the necessity of a three-way handshake usually before the transmission of data from sender to receiver? ",
       possibilities: [
         {
-          answer: "vertical"
+          answer: "Path determination"
         },
         {
-          answer: "horizontal"
+          answer: "Forwarding"
         },
         {
-          answer: "circular"
+          answer: "Call Set-up"
         },
         {
-          answer: "Three-dimensional."
+          answer: "All of the above"
         }
       ],
       selected: null,
@@ -282,19 +282,19 @@ var quizQuestions = [
     },
     {
       type: "text",
-      text: " Which regard to power and authority ,we may conclude all but which one of the following : ",
+      text: " Routing between autonomous systems is referred to as ____________. ",
       possibilities: [
         {
-          answer: "authority is only one source of influence among many"
+          answer: "interdomain routing"
         },
         {
-          answer: "supervisor should never have to rely on coercive power to obtain results"
+          answer: "intradomain routing"
         },
         {
-          answer: "constant reliance on authority indicates a potential supervisory problem"
+          answer: "both a and b"
         },
         {
-          answer: "group acceptance of authority is necessary for it to become a useful influence."
+          answer: "none of the above"
         }
       ],
       selected: null,
@@ -302,19 +302,19 @@ var quizQuestions = [
     },
     {
       type: "text",
-      text: " Centralization is a system of: ",
+      text: " In ________, each node maintains a vector (table) of minimum distances to every node. ",
       possibilities: [
         {
-          answer: "Planning"
+          answer: "path vector"
         },
         {
-          answer: "Organizing"
+          answer: "distance vector"
         },
         {
-          answer: "staffing"
+          answer: "link state"
         },
         {
-          answer: "Directing"
+          answer: "none of the above"
         }
       ],
       selected: null,
@@ -322,19 +322,19 @@ var quizQuestions = [
     },
     {
       type: "text",
-      text: "Which of the following is the oldest type of organization? ",
+      text: "Which of the following is a necessary part of the IPv6 datagram? ",
       possibilities: [
         {
-          answer: "functional organization"
+          answer: "Base header"
         },
         {
-          answer: "line organization"
+          answer: "Extension header"
         },
         {
-          answer: "line and staff organization"
+          answer: "Data packet from the upper layer"
         },
         {
-          answer: "committee organization."
+          answer: "(a) and (c)"
         }
       ],
       selected: null,
@@ -342,19 +342,19 @@ var quizQuestions = [
     },
     {
       type: "text",
-      text: " Matrix organizations are really a combination of the: ",
+      text: " If there are N routers from source to destination, the total end to end delay in sending packet P(L-> number of bits in the packet R-> transmission rate) is equal to ______________",
       possibilities: [
         {
-          answer: "	product and process bases"
+          answer: "	N"
         },
         {
-          answer: "process and geographic bases"
+          answer: "(N*L)/R"
         },
         {
-          answer: "customer and functional bases"
+          answer: "(2N*L)/R"
         },
         {
-          answer: "functional and product base"
+          answer: "L/R"
         }
       ],
       selected: null,
@@ -362,19 +362,19 @@ var quizQuestions = [
     },
     {
       type: "text",
-      text: " With regard to the differentiation of line and staff, we may conclude; ",
+      text: " The TTL field has value 10. How many routers (max) can process this datagram? ",
       possibilities: [
         {
-          answer: "line has total authority ;staff is limited to an advisory role"
+          answer: "11"
         },
         {
-          answer: "power is shifting away from staff toward line and appropriately so"
+          answer: "5"
         },
         {
-          answer: "the continued distinction creates unfortunate psychological batters"
+          answer: "10"
         },
         {
-          answer: "there is a sharp difference between the two."
+          answer: "1"
         }
       ],
       selected: null,
@@ -382,16 +382,16 @@ var quizQuestions = [
     },
     {
       type: "text",
-      text: " Staffing function of management comprises the activities of : ",
+      text: " Important feature provided by transport layer is:",
       possibilities: [
         {
-          answer: "selecting the suitable person for positions"
+          answer: "Host to Host service"
         },
         {
-          answer: "defining the requirements with regard to the people for the job to be done"
+          answer: "Process to Process service"
         },
         {
-          answer: "training and developing staff to accomplish their task more effectively"
+          answer: "Node to Node service"
         },
         {
           answer: "all of these."
@@ -402,16 +402,16 @@ var quizQuestions = [
     },
     {
       type: "text",
-      text: " One of the main reasons for obtaining a manager from outside an enterprise is : ",
+      text: " Well known port numbers are in the range of: ",
       possibilities: [
         {
-          answer: "to obtain fresh idea and new applications of management"
+          answer: "1 to 1024"
         },
         {
-          answer: "to enhance the public image of the enterprise being good place to work"
+          answer: "0 to 1023"
         },
         {
-          answer: "to avoid a moral problem among old employees"
+          answer: "1024 to 49,151"
         },
         {
           answer: "none of these"
@@ -422,16 +422,16 @@ var quizQuestions = [
     },
     {
       type: "text",
-      text: " 	The shifting of an employee from one of another that does not involve the assumption of greater responsibilities is knows: ",
+      text: "Technique of sending data along with acknowledgement is called as: * ",
       possibilities: [
         {
-          answer: "shifting"
+          answer: "Reverse Forwarding"
         },
         {
-          answer: "transfer"
+          answer: "Selective Forwarding"
         },
         {
-          answer: "exchange"
+          answer: "Piggybacking"
         },
         {
           answer: "termination."
@@ -442,19 +442,19 @@ var quizQuestions = [
     },
     {
       type: "text",
-      text: " Process of collecting and analysing information about the duties, responsibilities and conditions of a specific work assignment is : ",
+      text: " The header length of UDP is: ",
       possibilities: [
         {
-          answer: "job analysis"
+          answer: "20 bytes"
         },
         {
-          answer: "job evaluation"
+          answer: "8 bytes"
         },
         {
-          answer: "activity analysis"
+          answer: "40 bytes"
         },
         {
-          answer: "occupation analysis"
+          answer: "32 bytes"
         }
       ],
       selected: null,
@@ -462,19 +462,19 @@ var quizQuestions = [
     },
     {
       type: "text",
-      text: " A relatively recent development in the area of performance appraisal by which the performance review is oriented toward mutually established job objectives, is: ",
+      text: " Connection can be aborted by enabling which control flag ",
       possibilities: [
         {
-          answer: "goal oriented appraisal"
+          answer: "PSH"
         },
         {
-          answer: "checklist method"
+          answer: "RST"
         },
         {
-          answer: "critical incidents method"
+          answer: "URG"
         },
         {
-          answer: "graphical scales method."
+          answer: "MOV"
         }
       ],
       selected: null,
@@ -482,19 +482,19 @@ var quizQuestions = [
     },
     {
       type: "text",
-      text: " The developmental method in which the participants have the opportunity to learn human relations skill in a laboratory setting is : ",
+      text: " Nagle’s algorithm provides solution to sender side silly window syndrome ",
       possibilities: [
         {
-          answer: "special training courses"
+          answer: "True"
         },
         {
-          answer: "business games"
+          answer: "False"
         },
         {
-          answer: "role playing"
+          answer: ""
         },
         {
-          answer: "sensitive training ."
+          answer: ""
         }
       ],
       selected: null,
@@ -502,19 +502,19 @@ var quizQuestions = [
     },
     {
       type: "text",
-      text: " In controlling ,a common means for determining performance is by means of: ",
+      text: " Which of the following is/are the important applications of the application layer?  ",
       possibilities: [
         {
-          answer: "reports"
+          answer: "Electronic mail"
         },
         {
-          answer: "personal objectives"
+          answer: "World Wide Web"
         },
         {
-          answer: "standards"
+          answer: "USENET"
         },
         {
-          answer: "key cases."
+          answer: "All of the above"
         }
       ],
       selected: null,
@@ -522,19 +522,19 @@ var quizQuestions = [
     },
     {
       type: "text",
-      text: "  The control function of management embraces: ",
+      text: " Which is not a application layer protocol?  ",
       possibilities: [
         {
-          answer: "cost control"
+          answer: "HTTP"
         },
         {
-          answer: "financial control"
+          answer: "SMTP"
         },
         {
-          answer: "budgetary control"
+          answer: "FTP"
         },
         {
-          answer: "all of these."
+          answer: "TCP"
         }
       ],
       selected: null,
@@ -542,19 +542,19 @@ var quizQuestions = [
     },
     {
       type: "text",
-      text: " One of the following budgets is probably most closely allied to the sales budget: ",
+      text: " SMTP and HTTP are ____________; Internet Explorer and Chrome are _____________.  ",
       possibilities: [
         {
-          answer: "labour budget"
+          answer: "Application protocols; Application programs"
         },
         {
-          answer: "production budget"
+          answer: "Application programs; Application protocols"
         },
         {
-          answer: "advertising budget"
+          answer: "both (a) and (b)"
         },
         {
-          answer: "cash budget."
+          answer: "None of the above"
         }
       ],
       selected: null,
@@ -562,19 +562,19 @@ var quizQuestions = [
     },
     {
       type: "text",
-      text: " Several types of control systems rely on quantitative data in their measurement process .Which type does NOT? ",
+      text: " The WWW project was initiated by ______________. ",
       possibilities: [
         {
-          answer: "social control"
+          answer: "European Laboratory for Particle Physics (CERN)"
         },
         {
-          answer: "financial control"
+          answer: "IETF"
         },
         {
-          answer: "production control"
+          answer: "IANA"
         },
         {
-          answer: "quality control."
+          answer: "None of the above"
         }
       ],
       selected: null,
@@ -582,19 +582,19 @@ var quizQuestions = [
     },
     {
       type: "text",
-      text: " All of the following are dangers inherent in over control except:  ",
+      text: " The URL consists of the following parts: ",
       possibilities: [
         {
-          answer: "accenting short run results and ignoring long run outcomes"
+          answer: "protocol, host computer, port and path"
         },
         {
-          answer: "the reduction of personal freedom and independence at work"
+          answer: "protocol, host computer, port"
         },
         {
-          answer: "the creation of anxiety and stress among workers"
+          answer: "host computer, port and path"
         },
         {
-          answer: "a tendency toward increased flexibility."
+          answer: "None of the above"
         }
       ],
       selected: null,
@@ -602,19 +602,19 @@ var quizQuestions = [
     },
     {
       type: "text",
-      text: " For best management, controlling should be ",
+      text: " The first component of an electronic mail system is ___________________",
       possibilities: [
         {
-          answer: "	profit-oriented"
+          answer: "	User Agent (UA)"
         },
         {
-          answer: "cost-oriented"
+          answer: "Manager"
         },
         {
-          answer: "objective-oriented"
+          answer: "both (a) and (b)"
         },
         {
-          answer: "man-oriented."
+          answer: "None of the above"
         }
       ],
       selected: null,
@@ -622,19 +622,19 @@ var quizQuestions = [
     },
     {
       type: "text",
-      text: " The principle that a subordinate should receive order and be responsible to only one boss is known as: ",
+      text: " Assume five devices are arranged in a mesh topology. How many cables are needed?",
       possibilities: [
         {
-          answer: "unity of command"
+          answer: "8"
         },
         {
-          answer: "unity of direction"
+          answer: "6"
         },
         {
-          answer: "unity of work"
+          answer: "10"
         },
         {
-          answer: "unity of control"
+          answer: "4"
         }
       ],
       selected: null,
@@ -642,19 +642,19 @@ var quizQuestions = [
     },
     {
       type: "text",
-      text: " The activity of an executive manager in which we given careful consideration to future even is known as: ",
+      text: "IP, ARP, RARP, ICMP and IGMP are related to",
       possibilities: [
         {
-          answer: "planning"
+          answer: "Transport layer"
         },
         {
-          answer: "controlling"
+          answer: "Network layer"
         },
         {
-          answer: "appraising"
+          answer: "Application layer"
         },
         {
-          answer: "organizing"
+          answer: "Physical layer"
         }
       ],
       selected: null,
@@ -662,19 +662,19 @@ var quizQuestions = [
     },
     {
       type: "text",
-      text: " 	Successful coordination of activities results from effectively carrying out the function: ",
+      text: " In ______, a block of bits is organized in a table (rows and columns). The parity bit for each column is checked and a new row of eight bits which are parity bits for the whole block is created. Original data with eight parity bits are transferred to the receiver.  ",
       possibilities: [
         {
-          answer: "planning"
+          answer: "Vertical Redundancy Check (VRC)"
         },
         {
-          answer: "Organizing"
+          answer: "Longitudinal Redundancy Check (LRC)"
         },
         {
-          answer: "Directing"
+          answer: "Cyclic Redundancy Check (CRC)"
         },
         {
-          answer: "all of these"
+          answer: "Checksum"
         }
       ],
       selected: null,
@@ -682,19 +682,19 @@ var quizQuestions = [
     },
     {
       type: "text",
-      text: " The managerial function of organizing is : ",
+      text: " A technique called _____________ is used to improve the efficiency of the bidirectional protocols. When a frame is carrying data from A to B, it can also carry control information about arrived (or lost) frames from B; when a frame is carrying data from B to A, it can also carry control information about the arrived (or lost) frames from A.  ",
       possibilities: [
         {
-          answer: "to review and adjust plan in the light of changing conditions"
+          answer: "piggybacking"
         },
         {
-          answer: "to establish a program for the accomplishment of objectives"
+          answer: "synchronization"
         },
         {
-          answer: "to create a structure of functions and duties to be performed by a group of people"
+          answer: "both (a) and (b)"
         },
         {
-          answer: "to get things done through and with the help of people."
+          answer: "None of the above."
         }
       ],
       selected: null,
@@ -702,19 +702,19 @@ var quizQuestions = [
     },
     {
       type: "text",
-      text: "	The proper sequence of MBO activities is : ",
+      text: "	TELNET operates in three modes: _____________, ____________ and ______________.",
       possibilities: [
         {
-          answer: "implement the program, define the job, set objectives, evaluate performance"
+          answer: "default mode; character mode; line mode"
         },
         {
-          answer: "	evaluate performance, define the job, set objectives, implement the program"
+          answer: "default mode; character mode; transmission mode"
         },
         {
-          answer: "set objectives, evaluate performance, implement the program"
+          answer: "character mode; line mode; transmission mode"
         },
         {
-          answer: "define the job ,set objectives, evaluate performance, implement the program."
+          answer: "None of the above"
         }
       ],
       selected: null,
@@ -722,19 +722,19 @@ var quizQuestions = [
     },
     {
       type: "text",
-      text: " The principle of limiting factor states that in choosing from among alternatives the more individuals can identify and solve for those factors which are critical to: ",
+      text: " In ____________ addressing, variable length blocks are assigned that belong to no class. The entire address space is divided into blocks of different sizes. An organization is granted a block suitable for its purposes. ",
       possibilities: [
         {
-          answer: "formulation of organizational policies,rules ,procedures and strategies,the more clearly and accurately they can select the most favourable alternative"
+          answer: "Classful"
         },
         {
-          answer: "	the attainment of desired goal,the more clearly and accurately they can select the most favourable alternative"
+          answer: "	Classless"
         },
         {
-          answer: "	organizational efficiency and efficacy,the more clearly accurately they can select most favourable alternative"
+          answer: "	both (a) and (b)"
         },
         {
-          answer: "none of these"
+          answer: "None of the above"
         }
       ],
       selected: null,
@@ -742,19 +742,19 @@ var quizQuestions = [
     },
     {
       type: "text",
-      text: " The organization chart will not show: ",
+      text: " For IPv4, __________________ is an alternative to the older system of representing networks by their starting address and the subnet mask, both written in dot-decimal notation. 192.168.100.0/24 is equivalent to 192.168.100.0/255.255.255.0. ",
       possibilities: [
         {
-          answer: "the informal organization"
+          answer: "CIDR notation"
         },
         {
-          answer: "how the work is divided"
+          answer: "IPv6"
         },
         {
-          answer: "the nature of the work performed by the components"
+          answer: "either (a) or (b)"
         },
         {
-          answer: "chain of command"
+          answer: "None of the above"
         }
       ],
       selected: null,
@@ -762,19 +762,19 @@ var quizQuestions = [
     },
     {
       type: "text",
-      text: " Decentralization : ",
+      text: "  _______________is a network management protocol used on Internet Protocol (IP) networks, whereby a DHCP server dynamically assigns an IP address and other network configuration parameters to each device on the network, so they can communicate with other IP networks",
       possibilities: [
         {
-          answer: "increases the importance of superiors"
+          answer: "Dynamic Host Configuration Protocol (DHCP)"
         },
         {
-          answer: "decreases the importance of superiors"
+          answer: "BOOTP"
         },
         {
-          answer: "increases the importance of subordinates"
+          answer: "ICMP"
         },
         {
-          answer: "decreases the importance of subordinates"
+          answer: "IGMP"
         }
       ],
       selected: null,
@@ -782,19 +782,19 @@ var quizQuestions = [
     },
     {
       type: "text",
-      text: " The role of staff in line and staff organization is: ",
+      text: " When the size of the data unit received from the upper layer is too long for the network layer datagram or data link frame to handle, the transport protocol divides it into smaller usable blocks called segments. This process is called ________. ",
       possibilities: [
         {
-          answer: "Authoritative"
+          answer: "Segmentation"
         },
         {
-          answer: "supervise"
+          answer: "Concatenation"
         },
         {
-          answer: "advisory"
+          answer: "both (a) and (b)"
         },
         {
-          answer: "monitor"
+          answer: "none of the above"
         }
       ],
       selected: null,
@@ -802,19 +802,19 @@ var quizQuestions = [
     },
     {
       type: "text",
-      text: " People -centred leadership is described as: ",
+      text: " Find the FTP reply whose message is wrongly matched. ",
       possibilities: [
         {
-          answer: "democratic"
+          answer: "331 – Username OK, password required"
         },
         {
-          answer: "permissive"
+          answer: "425 – Can’t open data connection"
         },
         {
-          answer: "follower -oriented"
+          answer: "452 – Error writing file"
         },
         {
-          answer: "all of these"
+          answer: "452 – Cannot open data connection"
         }
       ],
       selected: null,
@@ -822,19 +822,19 @@ var quizQuestions = [
     },
     {
       type: "text",
-      text: " The communication pattern which was generally fastest and most accurate for simple problems was the: ",
+      text: " Match the following between the column ‘Method’ and the column ‘Action’. Method Action. I GET 1. Sends a document from the server to the client. II POST 2. Requests a document from the server. III PUT 3. Sends some information from the client to the server IVHEAD 4.Requests information about a document but not the document itself.  ",
       possibilities: [
         {
-          answer: "circular"
+          answer: "I,1; II,3; III,2, IV, 4"
         },
         {
-          answer: "chain"
+          answer: "I,2; II,3; III,1; IV,4"
         },
         {
-          answer: "centralized"
+          answer: "I,3; II,1; III;2; IV,4"
         },
         {
-          answer: "none of these"
+          answer: "I,2; II,1; III,3; IV,4"
         }
       ],
       selected: null,
@@ -842,19 +842,19 @@ var quizQuestions = [
     },
     {
       type: "text",
-      text: " A cause of job dissatisfaction is: ",
+      text: " A serious problem can arise in the sliding window operation when the receiver is only able to accept a few bytes at a time or when the sender transmits data in small segments repeatedly. This is called ____________ syndrome. ",
       possibilities: [
         {
-          answer: "salary"
+          answer: "sliding window"
         },
         {
-          answer: "fringe benefits"
+          answer: "silly window"
         },
         {
-          answer: "the use of human resource accounting"
+          answer: "either (a) or (b)"
         },
         {
-          answer: "the conflict between worker expectations and the organizations conditions"
+          answer: "neither (a) nor (b)"
         }
       ],
       selected: null,
@@ -862,19 +862,19 @@ var quizQuestions = [
     },
     {
       type: "text",
-      text: " In controlling ,a common means for determining performance is by means of: ",
+      text: " ______________ is a measure of the time it takes for a packet to travel from a computer, across a network to another computer, and back.  ",
       possibilities: [
         {
-          answer: "reports"
+          answer: "Round Trip Time (RTT) "
         },
         {
-          answer: "personal objectives"
+          answer: "Time to Live (TTL)"
         },
         {
-          answer: "standards"
+          answer: "either (a) or (b)"
         },
         {
-          answer: "key cases."
+          answer: "none of the above"
         }
       ],
       selected: null,
@@ -882,19 +882,19 @@ var quizQuestions = [
     },
     {
       type: "text",
-      text: " The budget that is most directly concerned with the distribution of overhead expenses    is the : ",
+      text: " ._____________ is a traffic shaping mechanism. In it, the input rate can vary but the output rate remains constant. A technique called leaky bucket can smooth out bursty traffic.  ",
       possibilities: [
         {
-          answer: "production budget"
+          answer: "Leaky bucket"
         },
         {
-          answer: "cash budget"
+          answer: "DECBit"
         },
         {
-          answer: "Advertisement budget"
+          answer: "RED"
         },
         {
-          answer: "manufacturing budget"
+          answer: "None of the above"
         }
       ],
       selected: null,
@@ -902,19 +902,19 @@ var quizQuestions = [
     },
     {
       type: "text",
-      text: " Control of a departmental budget by a finance staff is an example of: ",
+      text: "  __________ is an Internet Protocol (IP) process that breaks packets into smaller pieces (fragments), so that the resulting pieces can pass through a link with a smaller maximum transmission unit (MTU) than the original packet size. The fragments are reassembled by the receiving host ",
       possibilities: [
         {
-          answer: "centralized control"
+          answer: "IP fragmentation"
         },
         {
-          answer: "personal control"
+          answer: "segmentation"
         },
         {
-          answer: "self-control"
+          answer: "framing"
         },
         {
-          answer: "none of these."
+          answer: "None of the above"
         }
       ],
       selected: null,
